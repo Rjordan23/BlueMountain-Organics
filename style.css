@@ -275,13 +275,15 @@ footer {
 }
 
 @media(max-width: 1028px) {
-        /* //// Boxes Section //// */
-.boxes {
-    display: grid;
-    grid-gap: 20px;
-    grid-template-columns: repeat(2, 1fr);
-    margin-top: .5rem;
-}
+    /* //// Boxes Section //// */
+    .boxes {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .box {
+        padding: 1rem 1rem;
+    }
+
     .info-img {
         grid-area: info-img;
     }
