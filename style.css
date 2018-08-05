@@ -15,7 +15,7 @@ html {
 
 body { 
     background: #fff;
-    padding: 0 50px;
+    padding: 0 30px;
     margin: 0;
     line-height: 1.4;
 }
@@ -253,12 +253,16 @@ img {
 .meals {
     display: grid;
     grid-gap: 10px;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(4, 1fr);
 }
 
 .meals img {
     width: 100%;
-    box-shadow: var(--shadow); 
+    box-shadow: var(--shadow);
+}
+
+.meals img:hover {
+
 }
 
 /* //// Footer //// */
@@ -297,6 +301,10 @@ footer {
         'info-img info-img info-img'
         'info-list info-text info-text';
         padding: 1.5rem;
+    }
+
+    .meals {
+        grid-template-columns: repeat(4, 1fr);
     }
 
     /* Large screen Guarantee IMG */
