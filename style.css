@@ -33,6 +33,7 @@ a {
     text-transform: uppercase;
     border-radius: 20px;
 }
+
 /* Button arrow */
 .fa-arrow-righ {
     font-size: 1rem;
@@ -47,7 +48,7 @@ img {
     grid-gap: 20px;
 }
 
-/* //// Promo Header //// */
+/* //// Promo Section //// */
 #promo-code {
     display: flex;
     padding: 15px 0;
@@ -68,7 +69,7 @@ img {
     margin-right: 20px;
 }
 
-/* //// Navigation //// */
+/* //// Navigation Section //// */
 .main-nav ul {
     display: grid;
     grid-gap: 20px;
@@ -133,7 +134,6 @@ img {
 
 /* //// Top Box //// */
 .top-box {
-    /* background: var(--offWhite); */
     background: white;
     display: grid;
     align-items: center;
@@ -167,7 +167,28 @@ img {
     grid-area: top-box-c;
 }
 
-/* Boxes */
+/* //// Mission Section //// */
+#mission {
+     width: 75%;
+     margin: 0 auto;
+}
+
+.mission-statement {
+    grid-area: mission-statement;
+    flex-direction: column;
+}
+
+#mission h1 {
+    text-align: center;
+}
+
+#mission a {
+    display: flex;
+    margin: 0 auto;
+    width: 170px;
+}
+
+/* //// Boxes Section //// */
 .boxes {
     display: grid;
     grid-gap: 20px;
@@ -176,27 +197,66 @@ img {
 }
 
 .box {
-    background: var(--primary);
+    /* background: var(--primary); */
     text-align: center;
     padding: 1.5rem 2rem;
     box-shadow: var(--shadow);
 }
 
-/* Info */
+/* //// Info //// */
 .info {
-    background: var(--primary);
     box-shadow: var(--shadow);
     display: grid;
-    grid-gap: 30px;
-    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 20px;
+    grid-template-columns: repeat(3, 1fr);
     padding: 3rem;
 }
 
-/* Meals */
+.info h2 {
+    margin: 0;
+}
+
+.info p {
+    margin-top: 8px;
+}
+
+.info ul {
+    display: inline-block;
+    margin-bottom: 30px;
+    margin-top: 8px;
+    padding-left: 22px;
+    list-style: none;
+}
+
+.fa-check-square {
+    color: Green;
+}
+
+.info div:nth-of-type(2) h2:nth-of-type(1) {
+    padding-left: 25px;
+}
+
+.info div:nth-of-type(2) a {
+    margin-left: 25px;
+}
+
+/* Large screen Guarantee IMG */
+.info div:nth-of-type(2) img {
+    width: 30%;
+    padding-left: 40px;
+}
+
+.info img:nth-of-type(2) {
+    display: none;
+}
+
+
+
+/* //// Meals //// */
 .meals {
     display: grid;
-    grid-gap: 20px;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-gap: 10px;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
 }
 
 .meals img {
@@ -204,13 +264,37 @@ img {
     box-shadow: var(--shadow); 
 }
 
-/* Footer */
+/* //// Footer //// */
 footer {
     margin-top: 2rem;
     background: var(--dark);
     color: var(--light);
     text-align: center;
     padding: 1rem;
+}
+
+@media(max-width: 1024px) {
+    .info {
+        grid-gap: 20px;
+        grid-template-columns: repeat(2, 1fr);
+        padding: 3rem;
+    }
+
+    /* Large screen Guarantee IMG */
+    .info div:nth-of-type(2) img {
+    display: none;
+    }
+
+    #seal {
+        display: block;
+        text-align: center;
+    }
+
+    .info img:nth-of-type(2) {
+        display: block;
+        margin: 0 auto;
+        width: 50%;
+    }
 }
 
 @media(max-width: 786px) {
