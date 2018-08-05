@@ -15,7 +15,7 @@ html {
 
 body { 
     background: #fff;
-    margin: 0 50px;
+    padding: 0 50px;
     line-height: 1.4;
 }
 
@@ -197,7 +197,6 @@ img {
 }
 
 .box {
-    /* background: var(--primary); */
     text-align: center;
     padding: 1.5rem 2rem;
     box-shadow: var(--shadow);
@@ -208,21 +207,34 @@ img {
     box-shadow: var(--shadow);
     display: grid;
     grid-gap: 20px;
-    grid-template-columns: repeat(3, 1fr);
-    padding: 3rem;
+    grid-template-columns: 1.5fr 1.5fr 1.5fr;
+    padding: 1rem;
+}
+
+.info img {
+    box-shadow: var(--shadow);
 }
 
 .info h2 {
     margin: 0;
 }
 
+.info div:nth-of-type(2) h2:nth-of-type(1) {
+    padding-left: 25px;
+}
+
+.info-list {
+    padding: 0 1rem;
+}
+
 .info p {
     margin-top: 8px;
+    margin-bottom: 30px;
 }
 
 .info ul {
     display: inline-block;
-    margin-bottom: 30px;
+    margin-bottom: 0;
     margin-top: 8px;
     padding-left: 22px;
     list-style: none;
@@ -232,25 +244,9 @@ img {
     color: Green;
 }
 
-.info div:nth-of-type(2) h2:nth-of-type(1) {
-    padding-left: 25px;
-}
-
 .info div:nth-of-type(2) a {
     margin-left: 25px;
 }
-
-/* Large screen Guarantee IMG */
-.info div:nth-of-type(2) img {
-    width: 30%;
-    padding-left: 40px;
-}
-
-.info img:nth-of-type(2) {
-    display: none;
-}
-
-
 
 /* //// Meals //// */
 .meals {
@@ -273,11 +269,33 @@ footer {
     padding: 1rem;
 }
 
-@media(max-width: 1024px) {
+@media(max-width: 1028px) {
+        /* //// Boxes Section //// */
+.boxes {
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: repeat(2, 1fr);
+    margin-top: .5rem;
+}
+    .info-img {
+        grid-area: info-img;
+    }
+
+    .info-text {
+        grid-area: info-text;
+    }
+
+    .info-list {
+        grid-area: info-list;
+    }
+
     .info {
         grid-gap: 20px;
-        grid-template-columns: repeat(2, 1fr);
-        padding: 3rem;
+        grid-template-columns: none;
+        grid-template-areas:
+        'info-img info-img info-img'
+        'info-list info-text info-text';
+        padding: 1.5rem;
     }
 
     /* Large screen Guarantee IMG */
@@ -295,6 +313,10 @@ footer {
         margin: 0 auto;
         width: 50%;
     }
+}
+
+@media(max-width: 998px) {
+
 }
 
 @media(max-width: 786px) {
