@@ -191,16 +191,24 @@ img {
 
 /* //// Boxes Section //// */
 .boxes {
+    justify-content: center;
     display: grid;
-    grid-gap: 20px;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-gap: 50px;
+    grid-template-columns: 200px 200px 200px 300px;
     margin: .5rem 0;
 }
 
 .box {
     text-align: center;
-    padding: 1.5rem 2rem;
-    box-shadow: var(--shadow);
+    padding: .5rem .3rem;
+}
+
+.box h3 {
+    margin: 0;
+}
+
+.box p {
+    margin-bottom: 0;
 }
 
 /* //// Info //// */
@@ -253,7 +261,7 @@ img {
 .meals {
     display: grid;
     grid-gap: 10px;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(4, 1fr 1fr);
 }
 
 .img-container {
