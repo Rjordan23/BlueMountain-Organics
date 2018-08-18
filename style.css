@@ -290,12 +290,22 @@ img {
 }
 
 .review-card {
-    max-width: 300px;
-    background: red;
+    width: 400px;
+    height: 600px;
+    background: grey;
+}
+
+.review-card img {
+    display: block;
+    margin: 0 auto;
+    padding-top: 0px;
 }
 
 .card-header {
-    position: relative;
+    height: 30%;
+    width: 100%;
+    background-image: url('img/card-topper.jpeg');
+    background-size: cover;
 }
 
 .topper-img {
