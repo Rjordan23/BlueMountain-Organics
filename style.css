@@ -102,16 +102,17 @@ img {
     display: grid;
     grid-gap: 10px;
     grid-template-areas:
-    'showcase showcase top-box-a'
-    'showcase showcase top-box-b'
-    'showcase showcase top-box-c';
+    'showcase showcase showcase'
+    'showcase showcase showcase'
+    'showcase showcase showcase'
+    'top-box-a top-box-b top-box-c';
 }
 
 /* Showcase */
 .showcase {
     grid-area: showcase;
     min-height: 600px;
-    background: url('img/photo-1504674900247-0877df9cc836.jpg');
+    background: url('img/pexels-photo-315737.jpeg');
     background-size: cover;
     background-position: center;
     padding: 2rem;
