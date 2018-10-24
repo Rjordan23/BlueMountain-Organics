@@ -1,33 +1,44 @@
 /* Variables */
 :root {
-    --primary: #ddd;
-    --dark:  #333;
-    --light: #fff;
+    --primary-green: #1f2f16;
+    --secondary-green: #395b50;
+    --blue-dark:  #5a7684;
+    --blue-med: #92afd7;
+    --blue-light: #c5d1eb;
     --offWhite: #eaeaea;
-    --shadow: 0 1px 5px rgba(104, 104, 104, 0.8);
+    --light: #f8f8ff;
     --black: #000;
+    --shadow: 0 1px 5px rgba(104, 104, 104, 0.8);
+    --letter-gap: .05em;
+}
+
+* {
+    padding: 0;
+    margin: 0;
 }
 
 html {
     box-sizing: border-box;
-    font-family: Arial, Helvetica, sans-serif;
-    color: var(--dark);
+    font-family: 'Roboto', sans-serif;
+    /* font-family: Arial, Helvetica, sans-serif; */
+    color: var(--primary-green);
 }
 
 body { 
     background: #fff;
-    padding: 0 30px;
-    margin: 0;
     line-height: 1.4;
+    letter-spacing: .5
+    color:#fff;
 }
 
-a {
+a, ul {
     text-decoration: none;
+    list-style: none;
 }
 
 /* Button Class */
 .btn {
-    background-color: var(--dark);
+    background-color: var(--secondary-green);
     color: var(--light);
     padding: 0.6rem 1.3rem;
     text-decoration: none;
@@ -45,15 +56,17 @@ img {
     max-width: 100%;
 }
 
-.wraper {
+.wrapper {
     display: grid;
     grid-gap: 20px;
+    padding: 0 30px;
 }
 
 /* //// Promo Section //// */
 #promo-code {
     display: flex;
     padding: 15px 0;
+    background-color: red;
 }
 
 #promo-code p {
@@ -64,7 +77,7 @@ img {
 
 #promo-code a {
     text-transform: uppercase;
-    color: var(--dark);
+    color: var(--primary-green);
 }
 
 #promo-code a:nth-of-type(1) {
@@ -86,14 +99,14 @@ img {
     text-decoration: none;
     padding: 0.5rem;
     text-align: center;
-    color: var(--dark);
+    color: var(--primary-green);
     text-transform: uppercase;
     font-size: 1.1rem;
     box-shadow: var(--shadow);
 }
 
 .main-nav a:hover {
-    background: var(--dark);
+    background: var(--secondary-green);
     color: var(--light);
 }
 
@@ -112,28 +125,67 @@ img {
 .showcase {
     grid-area: showcase;
     min-height: 600px;
-    background: url('img/pexels-photo-315737.jpeg');
+    background: url('img/bell-pepper-carrot-carrots-952356.jpg');
     background-size: cover;
-    background-position: center;
+    /* background-position: center; */
+    position: relative;
     padding: 2rem;
-    display: flex;
-    flex-direction: column;
-    align-items: start;
-    justify-content: center;
+    /* display: flex; */
+    /* flex-direction: column; */
+    /* align-items: start; */
+    /* justify-content: center; */
     box-shadow: var(--shadow);
 }
 
-.showcase h1 {
-    font-size: 4rem;
-    margin-bottom: 0;
-    color: blue;
+.sign-up {
+    position: absolute;
+    top: 20%;
+    left: 10%;
+    background-color: var(--offWhite);
+    height: 310px;
+    width: 530px;
+    text-align: center;
+    padding: 40px 30px;
 }
 
-.showcase p {
+.showcase h1 {
+    font-size: 1.5em;
+    margin: 0;
+    text-transform: uppercase;
+    font-weight: 600;
+    color: #1F2F16;
+    letter-spacing: var(--letter-gap);
+}
+
+.showcase ul {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.showcase ul li {
+    display: flex;
+    align-items: center;
+    color: var(--secondary-green);
+    font-weight: 600;
+    font-size: 1.2rem;
+    opacity: .8; 
+}
+
+.fa-circle {
+    color: var(--black);
+    margin: 0 10px;
+    font-size: 5px;
+}
+
+/* .showcase ul li {
+} */
+
+/* .showcase p {
     font-size: 1.3rem;
     margin-top: 0;
     color: var(--light);
-}
+} */
 
 /* //// Top Box //// */
 .top-box {
@@ -143,6 +195,7 @@ img {
     justify-items: center;
     box-shadow: var(--shadow);
     padding: 1.2rem;
+    text-align: center;
 }
 
 
@@ -171,9 +224,11 @@ img {
 }
 
 /* //// Mission Section //// */
-#mission {
+#mission p {
      width: 75%;
      margin: 0 auto;
+     text-align: center;
+     color: var(--secondary-green);
 }
 
 .mission-statement {
@@ -322,17 +377,10 @@ img {
     margin: 0 auto;
 }
 
-
-
-
-
-
-
-
 /* //// Footer //// */
 footer {
     margin-top: 2rem;
-    background: var(--dark);
+    background: var(--secondary-green);
     color: var(--light);
     text-align: center;
     padding: 1rem;
