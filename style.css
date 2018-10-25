@@ -19,16 +19,15 @@
 
 html {
     box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
     font-family: 'Roboto', sans-serif;
-    /* font-family: Arial, Helvetica, sans-serif; */
     color: var(--primary-green);
 }
 
 body { 
     background: #fff;
     line-height: 1.4;
-    letter-spacing: .5
-    color:#fff;
+    letter-spacing: .5;
 }
 
 a, ul {
@@ -66,7 +65,6 @@ img {
 #promo-code {
     display: flex;
     padding: 15px 0;
-    background-color: red;
 }
 
 #promo-code p {
@@ -85,11 +83,14 @@ img {
 }
 
 /* //// Navigation Section //// */
+.main-nav .container {
+    padding: 0 20px;
+}
 .main-nav ul {
     display: grid;
     grid-gap: 20px;
-    padding: 0;
-    margin: 0;
+    padding: 20px 0;
+    margin: 0 auto;
     list-style: none;
     grid-template-columns: repeat(4, 1fr);
 }
@@ -125,11 +126,11 @@ img {
 .showcase {
     grid-area: showcase;
     min-height: 600px;
-    background: url('img/bell-pepper-carrot-carrots-952356.jpg');
+    background: url('img/barbecue-barbeque-bbq-1268551.jpg');
     background-size: cover;
-    /* background-position: center; */
+    background-position: center;
     position: relative;
-    padding: 2rem;
+    /* padding: 2rem; */
     /* display: flex; */
     /* flex-direction: column; */
     /* align-items: start; */
@@ -142,10 +143,10 @@ img {
     top: 20%;
     left: 10%;
     background-color: var(--offWhite);
-    height: 310px;
-    width: 530px;
+    height: 300px;
+    width: 500px;
     text-align: center;
-    padding: 40px 30px;
+    padding: 30px 10px;
 }
 
 .showcase h1 {
@@ -160,7 +161,7 @@ img {
 .showcase ul {
     display: flex;
     justify-content: center;
-    margin-top: 20px;
+    margin: 15px 0;
 }
 
 .showcase ul li {
@@ -178,14 +179,46 @@ img {
     font-size: 5px;
 }
 
-/* .showcase ul li {
-} */
+.showcase input {
+    padding: 10px 8px;
+    width: 42%;
+    font-size: 17px;
+    background: transparent;
+    border: 1px solid #bbb;
+    outline: none;
+    margin: 0 5px 20px 5px;
+}
 
-/* .showcase p {
-    font-size: 1.3rem;
-    margin-top: 0;
-    color: var(--light);
-} */
+.showcase input:focus {
+    outline: 1px solid var(--secondary-green);
+}
+
+.showcase button {
+    background: var(--blue-med);
+    color: #fff;
+    width: 95%;
+    border: none;
+    font-size: 16px;
+    font-weight: 550;
+    text-transform: uppercase;
+    padding: 15px 0;
+}
+
+.showcase button:hover {
+    background: var(--blue-dark);
+}
+
+.showcase p {
+    font-size: .85rem;
+}
+
+.showcase p:nth-of-type(1) {
+    margin: 15px 0;    
+}
+
+.showcase p span a {
+    color: var(--blue-dark);
+}
 
 /* //// Top Box //// */
 .top-box {
