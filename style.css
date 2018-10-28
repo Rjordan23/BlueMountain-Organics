@@ -161,11 +161,12 @@ img {
     position: absolute;
     top: 20%;
     left: 10%;
-    background-color: var(--offWhite);
+    background-color: #fff;
     height: 300px;
     width: 500px;
     text-align: center;
     padding: 30px 10px 20px 10px;
+    box-shadow: var(--shadow);
 }
 
 .showcase h1 {
@@ -220,6 +221,8 @@ img {
     font-weight: 550;
     text-transform: uppercase;
     padding: 15px 0;
+    box-shadow: var(--shadow);
+
 }
 
 .showcase button:hover {
