@@ -22,12 +22,15 @@ html {
     font-family: Arial, Helvetica, sans-serif;
     font-family: 'Roboto', sans-serif;
     color: var(--primary-green);
+    -webkit-font-smoothing: antialiased;
 }
 
 body { 
     background: #fff;
     line-height: 1.4;
     letter-spacing: .5;
+    -webkit-font-smoothing: antialiased;
+    text-shadow: 1px 1px 1px rgba(0,0,0,0.004);
 }
 
 a, ul {
@@ -35,7 +38,26 @@ a, ul {
     list-style: none;
 }
 
-/* Button Class */
+.section-title {
+    color: var(--secondary-green);
+    margin-top: 25px;
+    margin-bottom: 40px;
+    font-size: 36px;
+    font-weight: 500;
+    letter-spacing: 2px;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.feature-text {
+    color: var(--secondary-green);
+    font-size: 24px;
+    font-weight: 300;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    margin: 0 0 6.5px;
+}
+
 .btn {
     background-color: var(--secondary-green);
     color: var(--light);
@@ -61,16 +83,27 @@ img {
     padding: 0 30px;
 }
 
-/* //// Promo Section //// */
-#promo-code {
+/* ///// Section: Promo ///// */
+/* .border-img {
+   position: absolute;
+   width: 10%;
+   right: 0;
+   top: 0;
+} */
+
+#promo-code .container {
     display: flex;
-    padding: 15px 0;
+    justify-content: space-around;
+    padding: 10px 0;
 }
 
 #promo-code p {
-    margin: 0px auto;
-    text-align: center;
     text-transform: uppercase;
+}
+
+#promo-code span {
+    color: var(--secondary-green);
+    font-weight: 600;
 }
 
 #promo-code a {
@@ -78,14 +111,11 @@ img {
     color: var(--primary-green);
 }
 
-#promo-code a:nth-of-type(1) {
-    margin-right: 20px;
-}
-
-/* //// Navigation Section //// */
+/* ///// Section: Navigation ///// */
 .main-nav .container {
     padding: 0 20px;
 }
+
 .main-nav ul {
     display: grid;
     grid-gap: 20px;
@@ -111,31 +141,20 @@ img {
     color: var(--light);
 }
 
-/* //// Top Container //// */
+/* ///// Section: Showcase ///// */
 .top-container {
     display: grid;
-    grid-gap: 10px;
     grid-template-areas:
-    'showcase showcase showcase'
-    'showcase showcase showcase'
-    'showcase showcase showcase'
-    'top-box-a top-box-b top-box-c';
+    'showcase showcase showcase';
 }
 
-/* Showcase */
 .showcase {
+    position: relative;
     grid-area: showcase;
     min-height: 600px;
-    background: url('img/barbecue-barbeque-bbq-1268551.jpg');
+    background:  linear-gradient( rgba(0, 0, 0, .2), rgba(0, 0, 0, .1)), url('img/barbecue-barbeque-bbq-1268551.jpg');
     background-size: cover;
     background-position: center;
-    position: relative;
-    /* padding: 2rem; */
-    /* display: flex; */
-    /* flex-direction: column; */
-    /* align-items: start; */
-    /* justify-content: center; */
-    box-shadow: var(--shadow);
 }
 
 .sign-up {
@@ -146,12 +165,11 @@ img {
     height: 300px;
     width: 500px;
     text-align: center;
-    padding: 30px 10px;
+    padding: 30px 10px 20px 10px;
 }
 
 .showcase h1 {
     font-size: 1.5em;
-    margin: 0;
     text-transform: uppercase;
     font-weight: 600;
     color: #1F2F16;
@@ -194,7 +212,7 @@ img {
 }
 
 .showcase button {
-    background: var(--blue-med);
+    background: var(--secondary-green);
     color: #fff;
     width: 95%;
     border: none;
@@ -205,7 +223,7 @@ img {
 }
 
 .showcase button:hover {
-    background: var(--blue-dark);
+    background: var(--primary-green);
 }
 
 .showcase p {
@@ -220,7 +238,29 @@ img {
     color: var(--blue-dark);
 }
 
-/* //// Top Box //// */
+.showcase img {
+    position: absolute;
+    right: 10%;
+    top: 20%;
+    width: 15%;
+}
+
+/* ///// Section: How It Works ///// */
+#pricing-boxes {
+    margin-bottom: 60px;
+}
+
+#pricing-boxes .container {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+    color: #333;
+}
+
+#pricing-boxes h1 {
+    text-align: center;
+}
+
 .top-box {
     background: white;
     display: grid;
@@ -229,39 +269,51 @@ img {
     box-shadow: var(--shadow);
     padding: 1.2rem;
     text-align: center;
+    width: 20%;
 }
 
-
-.top-box .top-box-title {
-    font-size: 1.5rem;
-    margin: 0;
-}
-
-/* Plan It Box */
+/* Plan */
 .top-box-a {
     grid-area: top-box-a;
 }
 
-.how-it-works-text {
-    padding: 0;
-    margin: 0;
-    max-width: 200px;
-}
-
+/* Prepare */
 .top-box-b {
     grid-area: top-box-b;
+    margin: 0 30px;
 }
 
+/* Enjoy */
 .top-box-c {
     grid-area: top-box-c;
 }
 
+.how-it-works-text {
+    max-width: 200px;
+}
+
 /* //// Mission Section //// */
+.wrapper .container {
+    background-image: url('img/food-border3.jpeg');
+    background-size: cover;
+    background-position: center;
+    width: 85%;
+    margin: 0 auto;
+    padding: 30px 0;
+}
+
+#mission {
+    background: #fff;
+    width: 80%;
+    padding-top: 10px;
+    margin: 0 auto;
+}
+
 #mission p {
-     width: 75%;
+     width: 90%;
      margin: 0 auto;
      text-align: center;
-     color: var(--secondary-green);
+     color: #333;
 }
 
 .mission-statement {
@@ -270,7 +322,7 @@ img {
 }
 
 #mission h1 {
-    text-align: center;
+    margin-bottom: 20px;
 }
 
 #mission a {
@@ -284,8 +336,10 @@ img {
     justify-content: center;
     display: grid;
     grid-gap: 50px;
-    grid-template-columns: 200px 200px 200px 300px;
-    margin: .5rem 0;
+    grid-template-columns: repeat(2, 200px);
+    margin: 0 auto;
+    background: #fff;
+    width: 80%;
 }
 
 .box {
@@ -308,6 +362,7 @@ img {
     grid-gap: 20px;
     grid-template-columns: 1.5fr 1.5fr 1.5fr;
     padding: 1rem;
+    margin-top: 60px;
 }
 
 .info img {
@@ -347,7 +402,7 @@ img {
     margin-left: 25px;
 }
 
-/* //// Meals //// */
+/* //// Section: Meals //// */
 .meals {
     display: grid;
     grid-gap: 10px;
