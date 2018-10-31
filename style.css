@@ -416,10 +416,6 @@ img {
     color: Green;
 }
 
-/* .info div:nth-of-type(2) a {
-    margin-left: 25px;
-} */
-
 /* //// Section: Meals //// */
 .meals {
     display: grid;
@@ -483,9 +479,41 @@ img {
     margin: 0 auto;
 }
 
+/* //// Social Connect //// */
+#social-connect {
+    background: yellow;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 150px;
+}
+
+.connect {
+    width: 30%;
+    align-items: center;
+}
+
+.connect ul li {
+    display: inline-block;
+}
+
+.mailing-list {
+    width: 30%;
+    text-align: center;
+}
+
+.mailing-list input {
+    padding: 10px 10px;
+}
+
+.food-blog {
+    width: 33%;
+    text-align: center;
+}
+
+
 /* //// Footer //// */
 footer {
-    margin-top: 2rem;
     background: var(--secondary-green);
     color: var(--light);
     text-align: center;
