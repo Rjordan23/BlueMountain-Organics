@@ -59,6 +59,14 @@ a, ul {
     text-transform: uppercase;
 }
 
+.secondary-title {
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    color: var(--secondary-green);
+    font-weight: 450;
+    font-size: 14px;
+}
+
 .feature-text {
     color: var(--secondary-green);
     font-size: 24px;
@@ -385,8 +393,8 @@ img {
     margin-top: 60px;
 }
 
-.info img {
-    box-shadow: var(--shadow);
+.info-asset {
+    width: 80%;
 }
 
 .info h2 {
@@ -482,7 +490,8 @@ img {
 
 /* //// Social Connect //// */
 #social-connect {
-    background: #eee;
+    background: #FAFBFC;
+    border-top: 1px solid #ccc;
     margin-top: 70px;
     display: flex;
     justify-content: space-evenly;
@@ -494,32 +503,34 @@ img {
     height: 70%;
     width: 25%;
     text-align: center;
-    border-right: 1px solid #000;
+    border-right: 1px solid #ccc;
 }
 
 .connect p {
     margin-bottom: 20px;
 }
 
-.social-icon {
-    font-size: 1.8rem;
-    margin: 0 10px;
+.connect ul {
+    display: flex;
+    justify-content: space-evenly;
 }
 
-.connect ul li {
-    display: inline-block;
+.social-icon {
+    width: 45px;
+    margin: 0;
 }
 
 .mailing-list {
     height: 70%;
     width: 40%;
     text-align: center;
-    border-right: 1px solid #000;
+    border-right: 1px solid #ccc;
 }
 
 .mailing-list input {
     padding: 8px 10px;
     margin: 10px 0;
+    color: #777;
 } 
 
 
@@ -531,7 +542,8 @@ img {
     padding: 9px 15px 10px 10px;
     border-top-right-radius: 5px;
     border-bottom-right-radius: 5px;
-    background-color: red;
+    background-color: var(--secondary-green);
+    color: #fff;
 }
 
 .food-blog {
@@ -544,8 +556,37 @@ img {
 footer {
     background: var(--secondary-green);
     color: var(--light);
-    text-align: center;
-    padding: 1rem;
+}
+
+footer .container {
+    display: grid;
+    grid-template-columns: .5fr .5fr .4fr .6fr .6fr .6fr ;
+    padding: 1.5rem 3rem;
+}
+
+footer ul li {
+    margin: 8px 0;
+}
+
+footer ul li:hover {
+    text-decoration: underline;
+}
+
+#contact {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+footer img {
+    width: 130px;
+}
+
+footer p {
+    text-align: center;    
+    font-size: 20px;
+    margin: 0;
+    padding-bottom: 20px;
 }
 
 @media(max-width: 1028px) {
