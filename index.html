@@ -213,7 +213,7 @@
                         <div class="testimonial">
                             <span class="icon fas fa-quote-left"></span>
                             <p class="quote">
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate a eos at expedita maxime ea quisquam accusamus sequi ad dolorem quidem, minus accusantium excepturi eum vero, nobis explicabo vel perferendis?
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate a eos at expedita maxime.
                             </p>
                             <div class="testimonial-content">
                                 <div class="profile-pic">
@@ -226,7 +226,7 @@
                         <div class="testimonial">
                             <span class="icon fas fa-quote-left"></span>
                             <p class="quote">
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate a eos at expedita maxime ea quisquam accusamus sequi ad dolorem quidem, minus accusantium excepturi eum vero, nobis explicabo vel perferendis?
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate a eos at expedita maxime.
                             </p>
                             <div class="testimonial-content">
                                 <div class="profile-pic">
@@ -239,7 +239,7 @@
                         <div class="testimonial">
                             <span class="icon fas fa-quote-left"></span>
                             <p class="quote">
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate a eos at expedita maxime ea quisquam accusamus sequi ad dolorem quidem, minus accusantium excepturi eum vero, nobis explicabo vel perferendis?
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate a eos at expedita maxime.
                             </p>
                             <div class="testimonial-content">
                                 <div class="profile-pic">
@@ -252,7 +252,7 @@
                         <div class="testimonial">
                             <span class="icon fas fa-quote-left"></span>
                             <p class="quote">
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate a eos at expedita maxime ea quisquam accusamus sequi ad dolorem quidem, minus accusantium excepturi eum vero, nobis explicabo vel perferendis?
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate a eos at expedita maxime.
                             </p>
                             <div class="testimonial-content">
                                 <div class="profile-pic">
@@ -265,7 +265,7 @@
                         <div class="testimonial">
                             <span class="icon fas fa-quote-left"></span>
                             <p class="quote">
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate a eos at expedita maxime ea quisquam accusamus sequi ad dolorem quidem, minus accusantium excepturi eum vero, nobis explicabo vel perferendis?
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate a eos at expedita maxime.
                             </p>
                             <div class="testimonial-content">
                                 <div class="profile-pic">
@@ -278,7 +278,7 @@
                         <div class="testimonial">
                             <span class="icon fas fa-quote-left"></span>
                             <p class="quote">
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate a eos at expedita maxime ea quisquam accusamus sequi ad dolorem quidem, minus accusantium excepturi eum vero, nobis explicabo vel perferendis?
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate a eos at expedita maxime.
                             </p>
                             <div class="testimonial-content">
                                 <div class="profile-pic">
@@ -408,20 +408,54 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
 
     <script>
-    
+
         $(document).ready(function(){
-
-            $("#testimonial-slider").owlCarousel({
-               items: 3,
-                itemsDesktop: [1000,3],
-                itemsDesktopSmall: [979, 2],
-                itemsTablet: [768, 2],
-                itemsMobile: [650, 1],
-                pagination: true,
-                autoPlay: true
-            })
-
+            $(".owl-carousel").owlCarousel();
         });
+
+        $('.owl-carousel').owlCarousel({
+    loop:true,
+    margin:10,
+    responsiveClass:true,
+    responsive:{
+        0:{
+            items:1,
+            nav:true,
+            loop: true
+        },
+        600:{
+            items:2,
+            nav:true,
+            loop: true
+        },
+        768:{
+            items: 3,
+            nav:true,
+            loop: true,
+            animateIn:true
+        },
+        1000:{
+            items:3,
+            nav:true,
+            loop:true,
+            animateIn:true
+        }
+    }
+})
+    
+        // $(document).ready(function(){
+
+        //     $("#testimonial-slider").owlCarousel({
+        //        items: 3,
+        //         itemsDesktop: [1000,3],
+        //         itemsDesktopSmall: [979, 2],
+        //         itemsTablet: [768, 2],
+        //         itemsMobile: [650, 1],
+        //         pagination: true,
+        //         autoPlay: true
+        //     })
+
+        // });
 
     </script>
 

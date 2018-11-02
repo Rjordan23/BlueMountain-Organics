@@ -459,23 +459,22 @@ img {
 
 /* //// Reviews Section //// */
 #reviews {
-    background-color: red;
     padding: 40px 0;
 }
 
 .testimonial {
-    background-color: #fff;
+    background-color: var(--secondary-green);
     text-align: center;
     padding: 30px 30px 50px;
     margin: 0 15px 100px;
     position: relative;
-    /* margin-top: 168px; */
+    max-width: 340px;
 }
 
 .testimonial:before,
 .testimonial:after {
     content: "";
-    border-top: 40px solid #fff;
+    border-top: 40px solid var(--secondary-green);
     border-right: 125px solid transparent;
     position: absolute;
     bottom: -40px;
@@ -492,18 +491,18 @@ img {
 .testimonial .icon{
     display: inline-block;
     font-size: 40px;
-    color: var(--blue-dark);
+    color: var(--offWhite);
     margin-bottom: 20px;
-    opacity: .6;
+    opacity: .8;
 }
 
 .testimonial .quote {
     font-size: 16px;
-    color: #777;
-    text-align: justify;
+    color: var(--offWhite);
+    text-align: center;
     margin-bottom: 30px;
     opacity: .9;
-    letter-spacing: -1px;
+    letter-spacing: .09rem;
 }
 
 .testimonial .testimonial-content {
@@ -514,7 +513,7 @@ img {
 
 .testimonial .profile-pic {
     display: inline-block;
-    border: 6px solid #fff;
+    border: 4px solid #fff;
     border-radius: 50%;
     box-shadow: 0 0 2px 2px var(--blue-dark);
     overflow: hidden;
@@ -530,7 +529,7 @@ img {
 .testimonial .title { 
     font-size: 15px;
     font-weight: bold;
-    color: #fff;
+    color: var(--secondary-green);
     text-transform: capitalize;
     margin: 0 0 5px 0;
 }
@@ -538,12 +537,16 @@ img {
 .testimonial .post {
     display: block;
     font-size: 14px;
-    color: #ffd9b8;
+    color: var(--blue-med);
 }
 
 .profile-pic img {
     width: 100px !important;
     height: 50px;
+}
+
+.owl-theme .owl-controls {
+    margin-bottom: 90px;
 }
 
 
