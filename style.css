@@ -9,6 +9,7 @@
     --light: #f8f8ff;
     --black: #000;
     --shadow: 0 1px 5px rgba(104, 104, 104, 0.8);
+    --text-shadow: 0 1px 1px rgba(0, 0, 0, 0.4);
     --letter-gap: .05em;
 }
 
@@ -49,6 +50,16 @@ a, ul {
     letter-spacing: 2px;
     text-align: center;
     text-transform: uppercase;
+}
+
+.section-title:after {
+    content: "";
+    display: block;
+    margin: 0 auto;
+    width: 200px;
+    margin-top: 10px;
+    border-bottom: 8px solid var(--secondary-green);
+
 }
 
 .subtitle {
@@ -106,6 +117,7 @@ img {
     display: grid;
     grid-gap: 20px;
     padding: 0 30px;
+    width: 100%;
 }
 
 /* ///// Section: Promo ///// */
@@ -460,6 +472,25 @@ img {
 /* //// Reviews Section //// */
 #reviews {
     padding: 40px 0;
+    margin: 70px 0;
+    position: relative;
+    background: url('img/farm3.png');
+    background-size: cover;
+    background-position-Y: 60%;
+}
+
+#review-text {
+    text-align: center;
+    width: 70%;
+    margin: 0 auto 20px auto;
+    color: var(--secondary-green);
+    text-shadow: var(--text-shadow);
+}
+
+
+#reviews .container {
+    width: 75%;
+    margin: 0 auto;
 }
 
 .testimonial {
@@ -468,7 +499,6 @@ img {
     padding: 30px 30px 50px;
     margin: 0 15px 100px;
     position: relative;
-    max-width: 340px;
 }
 
 .testimonial:before,
@@ -500,7 +530,7 @@ img {
     font-size: 16px;
     color: var(--offWhite);
     text-align: center;
-    margin-bottom: 30px;
+    margin-bottom: 10px;
     opacity: .9;
     letter-spacing: .09rem;
 }
@@ -515,7 +545,7 @@ img {
     display: inline-block;
     border: 4px solid #fff;
     border-radius: 50%;
-    box-shadow: 0 0 2px 2px var(--blue-dark);
+    box-shadow: 0 0 2px 2px var(--primary-green);
     overflow: hidden;
     z-index: 1;
     position: relative;
@@ -530,14 +560,9 @@ img {
     font-size: 15px;
     font-weight: bold;
     color: var(--secondary-green);
+    text-shadow: var(--shadow);
     text-transform: capitalize;
     margin: 0 0 5px 0;
-}
-
-.testimonial .post {
-    display: block;
-    font-size: 14px;
-    color: var(--blue-med);
 }
 
 .profile-pic img {
@@ -545,17 +570,29 @@ img {
     height: 50px;
 }
 
-.owl-theme .owl-controls {
-    margin-bottom: 90px;
+#slider-buttons {
+    text-align: center;
+    padding: 10px 0;
+    color: var(--secondary-green);
 }
 
+.prevBtn, .nextBtn {
+    filter: drop-shadow(1px 1px 1px rgba(255,255,255,.5));
+}
 
+.prevBtn {
+    margin-right: 100px;
+}
+
+.prevBtn:Hover, .nextBtn:hover {
+    cursor: pointer;
+    filter: drop-shadow(1px 0 1px rgba(255,255,255,.3));
+}
 
 /* //// Social Connect //// */
 #social-connect {
     background: #FAFBFC;
     border-top: 1px solid #ccc;
-    margin-top: 70px;
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -649,7 +686,12 @@ footer p {
     text-align: center;    
     font-size: 20px;
     margin: 0;
-    padding-bottom: 20px;
+}
+
+#footer-border {
+    background-image: url('img/farm-border.png');
+    background-size: cover;
+    width: 100%;
 }
 
 @media(max-width: 1028px) {
