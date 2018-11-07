@@ -10,7 +10,7 @@
     <!-- Lightbox Min -->
     <link rel="stylesheet" type="text/css" href="css/lightbox.min.css">
     <!-- Font-Awesome -->
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700,900" rel="stylesheet">
     <!-- BS -->
@@ -26,21 +26,28 @@
             <p>Use promo code: <span>GreenOne</span> to recieve 20% off your first month.</p>
             <a href="#">Customer Support</a>
             <a href="#">Log In</a>
-            <!-- <img class="border-img" src="img/assets/TopRight_leaves-is.png" alt=""> -->
         </div>
     </section>
-    
+
     <!-- ///// Section: Navigation ///// -->
-    <!-- <nav class="main-nav">
+    <header>
         <div class="container">
-            <ul>
-                <li><a href="#">Our Mission</a></li>
-                <li><a href="#">Menu</a></li>
-                <li><a href="#">Testimonials</a></li>
-                <li><a href="#">Gift Cards</a></li>
-            </ul>
+            <h1 class="logo"><i class="fas fa-mountain"></i> BlueMountain <span>Organics</span></h1>
+
+            <nav class="site-nav">
+                <ul>
+                    <li><a href="#"><i class="fas fa-mountain site-nav-icon"></i> Home</a></li>
+                    <li><a href="#"><i class="fa fa-home site-nav-icon"></i> Misson</a></li>
+                    <li><a href="#">Lorem</a></li>
+                    <li><a href="#">Lorem</a></li>
+                </ul>
+            </nav>
+    
+            <div class="menu-toggle">
+                <div class="hamburger"></div>
+            </div>
         </div>
-    </nav> -->
+    </header>
 
     <!-- ///// Section: Showcase ///// -->
     <section class="top-container">
@@ -401,6 +408,9 @@
     <!-- JQuery -->
     <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
 
+    <script
+    src="https://code.jquery.com/ui/1.12.0/jquery-ui.js" integrity="sha256-0YPKAwZP7Mp3ALMRVB2i8GXeEndvCq3eSl/WsAl1Ryk=" crossorigin="anonymous"></script>
+
 
     <!-- LightBox -->
     <script src="js/lightbox-plus-jquery.min.js"></script>
@@ -408,6 +418,7 @@
     <!-- Owl -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
 
+    <!-- Owl Options -->
     <script>
         $(document).ready(function(){
             $(".owl-carousel").owlCarousel();
@@ -452,7 +463,16 @@
            
             owl.trigger('prev.owl.carousel', [900]);
         })
+    </script>
 
+    <!-- Menu Toggle -->
+    <script>
+        $('.menu-toggle').click(function() {
+            
+            $('.site-nav').toggleClass('site-nav-open', 600);
+            $(this).toggleClass('open');
+
+        })
     </script>
 
     
