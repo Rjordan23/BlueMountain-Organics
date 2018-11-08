@@ -13,8 +13,6 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700,900" rel="stylesheet">
-    <!-- BS -->
-
     <!-- Owl -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
 </head>
@@ -23,14 +21,14 @@
     <!-- ///// Section: Promo  ///// -->
     <section id="promo-code">
         <div class="container">
-            <p>Use promo code: <span>GreenOne</span> to recieve 20% off your first month.</p>
-            <a href="#">Customer Support</a>
-            <a href="#">Log In</a>
+            <p>Use promo code: <span>Green18</span> to recieve 20% off your first month</p>
+        
         </div>
     </section>
 
     <!-- ///// Section: Navigation ///// -->
     <header>
+        <span class="sticky">
         <div class="container">
             <h1 class="logo"><i class="fas fa-mountain"></i> BlueMountain <span>Organics</span></h1>
 
@@ -38,8 +36,9 @@
                 <ul>
                     <li><a href="#"><i class="fas fa-mountain site-nav-icon"></i> Home</a></li>
                     <li><a href="#"><i class="fa fa-home site-nav-icon"></i> Misson</a></li>
-                    <li><a href="#">Lorem</a></li>
-                    <li><a href="#">Lorem</a></li>
+                    <li><a href="#">Reviews</a></li>
+                    <li><a href="#">Sign Up</a></li>
+                    <li><a href="#">Log In</a></li>
                 </ul>
             </nav>
     
@@ -47,6 +46,7 @@
                 <div class="hamburger"></div>
             </div>
         </div>
+        </span>
     </header>
 
     <!-- ///// Section: Showcase ///// -->
@@ -72,6 +72,27 @@
             </div>
             <!-- <img src="img/assets/organics.png" alt=""> -->
         </header>
+    </section>
+
+    <!-- Section: Mobile View Sign-up form -->
+    <section id="mobile-cta">
+        <div class="mobile-sign-up">
+            <h1 class="section-title">Chef-Created, Organic & Delivered Daily</h1>
+            <ul>
+                <li>Fresh</li>
+                <li><i class="fas fa-circle"></i></li>
+                <li>Convenient</li>
+                <li><i class="fas fa-circle"></i></li>
+                <li>Delicious</li>
+            </ul>
+            <div class="mobile-form-inputs">
+                <input type="email" placeholder="Email">
+                <input type="text" placeholder="Zip Code">
+            </div>
+            <button type="submit">Start Today</button>
+            <p>Already have an account? <span><a href="#">Log in</a></span></p>
+            <p>Lorem ipsum dolor sit amet <span><a href="#">Terms</a></span> consectetur <span><a href="#">Privacy Policy</a></span></p>
+        </div>
     </section>
 
     <!-- ///// Section: How It Works ///// -->
@@ -103,7 +124,6 @@
         </div>
     </section>
 
-    
     <div class="wrapper">
         <!-- ///// Mission Statement Section ///// -->
         <div class="container">
@@ -111,11 +131,7 @@
                 <div class="mission-statement">
                     <h1 class="section-title">OUR MISSION</h1>
                     <p>Turnip greens yarrow ricebean rutabaga endive cauliflower sea lettuce kohlrabi amaranth water spinach avocado daikon napa cabbage asparagus winter purslane kale. Celery potato scallion desert raisin horseradish spinach carrot soko. Lotus root water spinach fennel kombu maize bamboo shoot green bean swiss chard seakale pumpkin onion chickpea gram corn pea. Brussels sprout coriander water chestnut gourd swiss chard wakame kohlrabi beetroot carrot watercress. Corn amaranth salsify bunya nuts nori azuki bean chickweed potato bell pepper artichoke.</p>
-        
-                    <p>Do in pariatur, jowl dolore capicola buffalo consectetur short loin. Tongue officia venison, tri-tip ea incididunt ground round ullamco alcatra tail kielbasa rump prosciutto. Capicola jowl qui flank, incididunt t-bone picanha in culpa cupidatat hamburger strip steak cillum tri-tip beef. Venison quis ribeye tongue swine incididunt. Beef ribs filet mignon ipsum irure.</p>
-                    <a class="btn" href="#" >Meet Our Farmers</a>
                 </div>
-                    
             </section>
 
             <!-- ///// Section: Feature Boxes ///// -->
@@ -408,10 +424,6 @@
     <!-- JQuery -->
     <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
 
-    <script
-    src="https://code.jquery.com/ui/1.12.0/jquery-ui.js" integrity="sha256-0YPKAwZP7Mp3ALMRVB2i8GXeEndvCq3eSl/WsAl1Ryk=" crossorigin="anonymous"></script>
-
-
     <!-- LightBox -->
     <script src="js/lightbox-plus-jquery.min.js"></script>
 
@@ -469,7 +481,7 @@
     <script>
         $('.menu-toggle').click(function() {
             
-            $('.site-nav').toggleClass('site-nav-open', 600);
+            $('.site-nav').toggleClass('site-nav-open');
             $(this).toggleClass('open');
 
         })
