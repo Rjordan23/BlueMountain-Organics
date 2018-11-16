@@ -35,6 +35,7 @@ body {
     letter-spacing: .5;
     -webkit-font-smoothing: antialiased;
     text-shadow: 1px 1px 1px rgba(0,0,0,0.004);
+    overflow-x: hidden;
 }
 
 a, ul {
@@ -109,10 +110,6 @@ img {
     max-width: 100%;
 }
 
-.wrapper {
-    padding: 0 30px;
-    width: 100%;
-}
 
 /* ///// Section: Promo ///// */
 #promo-code .container {
@@ -121,11 +118,19 @@ img {
     padding: 10px 0;
 }
 
-#promo-code p {
+#promo-code .container p {
     text-transform: uppercase;
     letter-spacing: .03em;
     font-size: 13px;
     font-weight: 550;
+}
+
+.sm-logo {
+    display: none;
+    text-align: center;
+    font-size: 23px;
+    font-weight: 600;
+
 }
 
 #promo-code span {
@@ -471,24 +476,55 @@ header .container {
 
 /* //// Mission Section //// */
 .wrapper .container { 
-    background-image: url('img/food-border3.jpeg');
-    background-size: cover;
-    background-position: center;
-    width: 95%;
-    margin: 0 auto;
+    margin: 120px 0;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(1, 1fr);
+    padding-right: 10px;
+}
+
+.grid-box {
+    /* background: red; */
+    display: grid;
+    grid-gap: 5px;
+    grid-template-columns: repeat(9, 1fr);
+    grid-template-rows: repeat(2, .5fr);
+}
+
+.smiths {
+    grid-column: 1 / 4;
+
+    object-fit: cover;
+    height: 50%;
+    width: 100%;
+}
+
+.kids {
+    grid-column: 4 / 7;
+    grid-row: 2 / 3;
+    object-fit: cover;
+    height: 50%;
+    width: 100%;
+}
+
+.family {
+    grid-column: 7 / 10;
+
+    object-fit: cover;
+    height: 50%;
+    width: 100%;
 }
 
 /* Top inner white box */
 #mission {
     background: #fff;
-    width: 70%;
     padding: 20px 0;
     margin: 0 auto;
 }
 
 #mission p {
      width: 85%;
-     text-align: justify;
+     text-align: center;
      font-size: 18px;
      margin: 10px  auto;
      color: #333;
@@ -505,11 +541,8 @@ header .container {
     width: 70%;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-gap: 10px;
     justify-content: center;
     margin: 0 auto;
-    background: #fff;
-    padding: 20px 10px;
 }
 
 .box {
@@ -530,9 +563,17 @@ header .container {
     box-shadow: var(--shadow);
     display: grid;
     grid-gap: 20px;
-    grid-template-columns: 1.7fr 1.5fr .5fr;
-    padding: 3rem .5rem;
-    margin-top: 120px;
+    grid-template-columns: 1.5fr 1.5fr .5fr;
+    padding: 2em 1em;
+    width: 95%;
+    margin: 80px auto 20px auto;
+}
+
+.info-img {
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+
 }
 
 .info-asset {
@@ -568,16 +609,21 @@ header .container {
 }
 
 /* //// Section: Meals //// */
+
 .meals .container-a {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-gap: 10px;
+    width: 90%;
+    margin: 0 auto;
 }
 
 .meals .container-b {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-gap: 10px;
+    width: 90%;
+    margin: 0 auto;
 }
 
 .img-container {
@@ -834,6 +880,8 @@ footer p {
     }
     .info-img {
         grid-area: info-img;
+        height: 400px;
+        width: 100%;
     }
     .info-text {
         grid-area: info-text;
@@ -843,7 +891,7 @@ footer p {
     }
     .info {
         grid-gap: 20px;
-        grid-template-columns: none;
+        grid-template-columns: repeat(2, 1fr);
         grid-template-areas:
         'info-img info-img info-img'
         'info-list info-text info-text';
@@ -905,6 +953,11 @@ footer p {
     .wrapper {
         padding: 0;
     }
+    .meals .container-a {
+        grid-template-columns: repeat(2, 1fr);
+        width: 90%;
+        margin: 0 auto;
+    }
 }
 
 @media(min-width: 930px) {
@@ -933,9 +986,40 @@ footer p {
     a .site-nav-icon {
         display: none;
     }
+}
 
+@media(max-width: 900px) {
+    .wrapper .container { 
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        padding-right: 0;
+        margin: 80px 0;
+    }
+    
+    .grid-box {
+        display: none;;
+    }
+    footer .container {
+        grid-template-columns: .5fr .5fr .8fr .12fr .5fr;
+        padding: 1.5rem 3rem;
+    }
+    .row-three {
+        display: none;
+    }
+}
 
-
+@media(max-width: 880px) {
+    .food-blog, .mailing-list {
+        display: none;
+    }
+    .connect {
+        width: 100%;
+        border-right: 0;
+    }
+    
+    .social-icon {
+        width: 55px;
+    }
 }
 
 @media(max-width: 786px) {
@@ -943,6 +1027,15 @@ footer p {
         grid-template-areas:
         'showcase showcase showcase'
         'top-box-a top-box-b top-box-c'
+    }
+
+    #mission {
+        width: 90%;
+    }
+
+    #mission p {
+        width: 90%;
+        margin: 0;
     }
 
     .showcase h1 {
@@ -953,18 +1046,37 @@ footer p {
         grid-template-columns: 1fr 1fr;
     }
 
+    .mission-statement {
+        width: 90%;
+        margin: 0 auto;
+    }
+
     .info {
         grid-template-columns: 1fr;
+    }
+
+    .info-text {
+        text-align: center;
     }
 
     .info .btn {
         display: block;
         text-align: center;
-        margin: auto;
+        margin: 0 auto;
     }
 }
 
-@media(max-width: 576px) {
+@media(max-width: 700px) {
+    footer .container {
+        grid-template-columns: .5fr .8fr .12fr .5fr;
+        padding: 1.5rem 3rem;
+    }
+    .row-two {
+        display: none;
+    }
+}
+
+@media(max-width: 608px) {
     .top-container {
         grid-template-areas:
         'showcase'
@@ -972,4 +1084,70 @@ footer p {
         'top-box-b'
         'top-box-c'
     }
+
+    .info {
+        grid-gap: 20px;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-areas:
+        'info-img info-img'
+        'info-text info-text';
+        padding: 0;
+    }
+
+    .info-text {
+        padding: 0 1em;
+    }
+    
+    .info-list {
+        display: none;
+    }
 }
+
+@media(max-width: 500px) {
+    footer .container {
+        grid-template-columns: repeat(1, 1fr);
+        padding: 0
+    }
+
+    .row-five {
+        text-align: center;
+    }
+    .row-one {
+        display: none;
+    }
+}
+
+@media(max-width: 475px) {
+    .meals .container-a {
+        grid-template-columns: repeat(1, 1fr);
+    }
+    
+    .meals .container-b {
+        display: none;
+    }
+}
+
+@media(max-width: 365px) {
+    .info-btn {
+        padding: 10px 12px;
+        width: 100%;
+    }
+}
+
+@media(max-width: 330px) {
+    #promo-code .container p {
+        display: none;
+    }
+    header{
+        height: 50px;
+    }
+    .logo {
+        display: none;
+    }
+   .sm-logo {
+       display: block;
+       margin-bottom: 20px;
+   }
+}
+
+
